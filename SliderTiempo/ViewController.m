@@ -25,7 +25,7 @@
     [slider setThumbImage:[UIImage imageNamed:@"emptyimage"] forState:UIControlStateNormal];
     [slider setThumbTintColor:nil];
     funcionamiento = NO;
-    tiempo = [NSTimer scheduledTimerWithTimeInterval:(0.001/1.0) target:self selector:@selector(gameOn) userInfo:nil repeats:YES];
+    tiempo = [NSTimer scheduledTimerWithTimeInterval:(0.001/1.0) target:self selector:@selector(comenzar) userInfo:nil repeats:YES];
 	
 }
 -(IBAction)iniciar:(id)sender {
@@ -39,7 +39,7 @@
 }
 
 
--(void) gameOn {
+-(void) comenzar {
     
     if (funcionamiento == YES) {
         if (slider.value>0.7 && slider.value<1.0) {
