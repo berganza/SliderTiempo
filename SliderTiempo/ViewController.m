@@ -14,40 +14,42 @@
 
 @implementation ViewController
 
+@synthesize slider, tiempo, funcionamiento;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    mySlider.transform = CGAffineTransformMakeRotation(270.0/180*M_PI);
-    [mySlider setMinimumTrackTintColor:[UIColor greenColor]];
-    [mySlider setMaximumTrackImage:[UIImage imageNamed:@"emptyimage"] forState:UIControlStateNormal];
-    [mySlider setThumbImage:[UIImage imageNamed:@"emptyimage"] forState:UIControlStateNormal];
-    [mySlider setThumbTintColor:nil];
-    isPlaying = NO;
-    myTimer = [NSTimer scheduledTimerWithTimeInterval:(0.001/1.0) target:self selector:@selector(gameOn) userInfo:nil repeats:YES];
+    slider.transform = CGAffineTransformMakeRotation(270.0/180*M_PI);
+    [slider setMinimumTrackTintColor:[UIColor greenColor]];
+    [slider setMaximumTrackImage:[UIImage imageNamed:@"emptyimage"] forState:UIControlStateNormal];
+    [slider setThumbImage:[UIImage imageNamed:@"emptyimage"] forState:UIControlStateNormal];
+    [slider setThumbTintColor:nil];
+    funcionamiento = NO;
+    tiempo = [NSTimer scheduledTimerWithTimeInterval:(0.001/1.0) target:self selector:@selector(gameOn) userInfo:nil repeats:YES];
 	
 }
--(IBAction)startTimer:(id)sender {
+-(IBAction)iniciar:(id)sender {
     
-    if (isPlaying==NO) {
-        isPlaying=YES;
-        [mySlider setValue:0.0];
+    if (funcionamiento==NO) {
+        funcionamiento=YES;
+        [slider setValue:0.0];
     } else {
-        isPlaying=NO;
+        funcionamiento=NO;
     }
 }
 
 
 -(void) gameOn {
     
-    if (isPlaying == YES) {
-        if (mySlider.value>0.7 && mySlider.value<1.0) {
-            mySlider.value = mySlider.value +0.0001;
-            [mySlider setMinimumTrackTintColor:[UIColor redColor]];
-        } else if (mySlider.value<0.7) {
-            mySlider.value = mySlider.value +0.0001;
-            [mySlider setMinimumTrackTintColor:[UIColor greenColor]];
+    if (funcionamiento == YES) {
+        if (slider.value>0.7 && slider.value<1.0) {
+            slider.value = slider.value +0.0001;
+            [slider setMinimumTrackTintColor:[UIColor redColor]];
+        } else if (slider.value<0.7) {
+            slider.value = slider.value +0.0001;
+            [slider setMinimumTrackTintColor:[UIColor greenColor]];
         } else {
-            [mySlider setMinimumTrackTintColor:[UIColor blueColor]];
+            [slider setMinimumTrackTintColor:[UIColor blueColor]];
         }
     }
 }

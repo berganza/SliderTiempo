@@ -24,7 +24,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="startTimer:" destination="2" eventType="touchUpInside" id="9VY-sN-uC1"/>
+                                    <action selector="iniciar:" destination="2" eventType="touchUpInside" id="Aau-2M-8It"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" id="4a6-FU-fqT">
@@ -60,7 +60,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="mySlider" destination="4a6-FU-fqT" id="l3I-8E-6Qt"/>
+                        <outlet property="slider" destination="4a6-FU-fqT" id="KNX-AT-BRj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
@@ -75,8 +75,8 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
-                <relationship kind="action" name="startTimer:"/>
-                <relationship kind="outlet" name="mySlider" candidateClass="UISlider"/>
+                <relationship kind="action" name="iniciar:"/>
+                <relationship kind="outlet" name="slider" candidateClass="UISlider"/>
             </relationships>
         </class>
     </classes>

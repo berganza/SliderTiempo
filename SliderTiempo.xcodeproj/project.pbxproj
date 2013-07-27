@@ -16,7 +16,6 @@
 		7DAD469117A37491006F9DE6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DAD469017A37491006F9DE6 /* Default.png */; };
 		7DAD469317A37491006F9DE6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DAD469217A37491006F9DE6 /* Default@2x.png */; };
 		7DAD469517A37491006F9DE6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DAD469417A37491006F9DE6 /* Default-568h@2x.png */; };
-		7DAD469817A37491006F9DE6 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DAD469617A37491006F9DE6 /* MainStoryboard_iPhone.storyboard */; };
 		7DAD469B17A37491006F9DE6 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DAD469917A37491006F9DE6 /* MainStoryboard_iPad.storyboard */; };
 		7DAD469E17A37491006F9DE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD469D17A37491006F9DE6 /* ViewController.m */; };
 		7DAD46A917A38007006F9DE6 /* emptyimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DAD46A817A38007006F9DE6 /* emptyimage.png */; };
@@ -37,7 +36,6 @@
 		7DAD469017A37491006F9DE6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7DAD469217A37491006F9DE6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7DAD469417A37491006F9DE6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		7DAD469717A37491006F9DE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		7DAD469A17A37491006F9DE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		7DAD469C17A37491006F9DE6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7DAD469D17A37491006F9DE6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 			children = (
 				7DAD468D17A37491006F9DE6 /* AppDelegate.h */,
 				7DAD468E17A37491006F9DE6 /* AppDelegate.m */,
-				7DAD469617A37491006F9DE6 /* MainStoryboard_iPhone.storyboard */,
 				7DAD469917A37491006F9DE6 /* MainStoryboard_iPad.storyboard */,
 				7DAD469C17A37491006F9DE6 /* ViewController.h */,
 				7DAD469D17A37491006F9DE6 /* ViewController.m */,
@@ -171,7 +168,6 @@
 				7DAD469117A37491006F9DE6 /* Default.png in Resources */,
 				7DAD469317A37491006F9DE6 /* Default@2x.png in Resources */,
 				7DAD469517A37491006F9DE6 /* Default-568h@2x.png in Resources */,
-				7DAD469817A37491006F9DE6 /* MainStoryboard_iPhone.storyboard in Resources */,
 				7DAD469B17A37491006F9DE6 /* MainStoryboard_iPad.storyboard in Resources */,
 				7DAD46A917A38007006F9DE6 /* emptyimage.png in Resources */,
 				7DAD46AB17A38357006F9DE6 /* termometro.png in Resources */,
@@ -200,14 +196,6 @@
 				7DAD468817A37491006F9DE6 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		7DAD469617A37491006F9DE6 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7DAD469717A37491006F9DE6 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		7DAD469917A37491006F9DE6 /* MainStoryboard_iPad.storyboard */ = {
@@ -286,6 +274,7 @@
 				GCC_PREFIX_HEADER = "SliderTiempo/SliderTiempo-Prefix.pch";
 				INFOPLIST_FILE = "SliderTiempo/SliderTiempo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -297,6 +286,7 @@
 				GCC_PREFIX_HEADER = "SliderTiempo/SliderTiempo-Prefix.pch";
 				INFOPLIST_FILE = "SliderTiempo/SliderTiempo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -320,6 +310,7 @@
 				7DAD46A317A37491006F9DE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

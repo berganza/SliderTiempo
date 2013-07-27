@@ -8,14 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController {
+@interface ViewController : UIViewController
     
-    IBOutlet UISlider * mySlider;
-    NSTimer * myTimer;
-    BOOL isPlaying;
-}
+@property (nonatomic, strong) IBOutlet UISlider * slider;
+@property (nonatomic, strong) NSTimer * tiempo;
+@property BOOL funcionamiento;
 
--(IBAction)startTimer:(id)sender;
+-(IBAction)iniciar:(id)sender;
 
 
 @end
